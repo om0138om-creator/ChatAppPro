@@ -1,2 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-13. layout_typing_indicator.xml - مؤشر الكتابة
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="center_vertical"
+    android:padding="8dp"
+    android:background="@android:color/transparent">
+
+    <TextView
+        android:id="@+id/typingText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="جاري الكتابة..."
+        android:textSize="14sp"
+        android:textColor="#888888"
+        android:textStyle="italic" />
+
+</LinearLayout>
