@@ -1,0 +1,39 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    namespace 'com.chatapp.pro'
+    compileSdk 33
+
+    defaultConfig {
+        applicationId "com.chatapp.pro"
+        minSdk 24
+        targetSdk 33
+        versionCode 1
+        versionName "1.0"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'com.google.android.material:material:1.9.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    
+    // Supabase & Networking
+    implementation 'com.squareup.okhttp3:okhttp:4.10.0'
+    implementation 'org.json:json:20230227'
+    
+    // Cloudinary
+    implementation 'com.cloudinary:cloudinary-android:2.3.1'
+    
+    // Glide for images
+    implementation 'com.github.bumptech.glide:glide:4.15.1'
+}
