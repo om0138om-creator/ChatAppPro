@@ -1,0 +1,90 @@
+     8. dialog_image_preview.xml - معاينة الصورة قبل الإرسال
+     ═══════════════════════════════════════════════════════════════ -->
+
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black">
+
+    <ImageView
+        android:id="@+id/previewImage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/bottomSection"
+        android:scaleType="centerInside"/>
+
+    <LinearLayout
+        android:id="@+id/bottomSection"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical"
+        android:background="@drawable/gradient_bottom"
+        android:padding="16dp">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="أضف تعليق..."
+            app:boxBackgroundMode="outline"
+            app:boxCornerRadiusTopStart="12dp"
+            app:boxCornerRadiusTopEnd="12dp"
+            app:boxCornerRadiusBottomStart="12dp"
+            app:boxCornerRadiusBottomEnd="12dp"
+            app:boxStrokeColor="@color/white"
+            app:hintTextColor="@color/white"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/captionInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textMultiLine|textCapSentences"
+                android:textSize="15sp"
+                android:textColor="@color/white"
+                android:fontFamily="@font/cairo_regular"
+                android:maxLines="3"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginTop="16dp">
+
+            <Button
+                android:id="@+id/cancelButton"
+                android:layout_width="0dp"
+                android:layout_height="52dp"
+                android:layout_weight="1"
+                android:text="إلغاء"
+                android:textSize="15sp"
+                android:textColor="@color/white"
+                android:fontFamily="@font/cairo_bold"
+                android:background="@drawable/button_outline_white"
+                android:layout_marginEnd="8dp"/>
+
+            <Button
+                android:id="@+id/sendButton"
+                android:layout_width="0dp"
+                android:layout_height="52dp"
+                android:layout_weight="1"
+                android:text="إرسال"
+                android:textSize="15sp"
+                android:textColor="@color/white"
+                android:fontFamily="@font/cairo_bold"
+                android:background="@drawable/button_primary"
+                android:layout_marginStart="8dp"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>
+
+
+<!-- ═══════════════════════════════════════════════════════════════

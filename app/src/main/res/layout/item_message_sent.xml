@@ -1,0 +1,109 @@
+     3. item_message_sent.xml - تصميم الرسالة المُرسلة
+     ═══════════════════════════════════════════════════════════════ -->
+
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="4dp">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/messageCard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="80dp"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="2dp"
+        app:cardBackgroundColor="@color/message_sent_bg">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="12dp"
+            android:minWidth="80dp"
+            android:maxWidth="280dp">
+
+            <!-- Media Container (for images/videos) -->
+            <RelativeLayout
+                android:id="@+id/mediaContainer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/messageImage"
+                    android:layout_width="220dp"
+                    android:layout_height="220dp"
+                    android:scaleType="centerCrop"
+                    android:background="@drawable/bg_image_placeholder"/>
+
+                <ProgressBar
+                    android:id="@+id/uploadProgress"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_centerInParent="true"
+                    android:indeterminateTint="@color/white"
+                    android:visibility="gone"/>
+
+                <!-- Play Button for Videos -->
+                <ImageView
+                    android:id="@+id/playButton"
+                    android:layout_width="56dp"
+                    android:layout_height="56dp"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/ic_play_circle"
+                    android:tint="@color/white"
+                    android:visibility="gone"/>
+
+            </RelativeLayout>
+
+            <!-- Message Text -->
+            <TextView
+                android:id="@+id/messageText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="نص الرسالة هنا"
+                android:textSize="15sp"
+                android:textColor="@color/white"
+                android:fontFamily="@font/cairo_regular"
+                android:lineSpacingExtra="2dp"/>
+
+            <!-- Time and Status -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="end|center_vertical"
+                android:layout_gravity="end"
+                android:layout_marginTop="4dp">
+
+                <TextView
+                    android:id="@+id/timeText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="12:34"
+                    android:textSize="11sp"
+                    android:textColor="@color/white_80"
+                    android:fontFamily="@font/cairo_regular"/>
+
+                <ImageView
+                    android:id="@+id/statusIcon"
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:src="@drawable/ic_double_check"
+                    android:tint="@color/white_80"
+                    android:layout_marginStart="4dp"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>
+
+
+<!-- ═══════════════════════════════════════════════════════════════

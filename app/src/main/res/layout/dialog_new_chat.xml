@@ -1,0 +1,80 @@
+     7. dialog_new_chat.xml - نافذة محادثة جديدة
+     ═══════════════════════════════════════════════════════════════ -->
+
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:padding="16dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="محادثة جديدة"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@color/text_primary"
+        android:fontFamily="@font/cairo_bold"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- Search Input -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="ابحث عن مستخدم..."
+        app:boxBackgroundMode="outline"
+        app:boxCornerRadiusTopStart="12dp"
+        app:boxCornerRadiusTopEnd="12dp"
+        app:boxCornerRadiusBottomStart="12dp"
+        app:boxCornerRadiusBottomEnd="12dp"
+        app:startIconDrawable="@drawable/ic_search"
+        app:startIconTint="@color/primary"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/searchUserInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:textSize="15sp"
+            android:fontFamily="@font/cairo_regular"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Users List -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/usersRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_marginTop="16dp"
+        android:clipToPadding="false"/>
+
+    <!-- Search Progress -->
+    <ProgressBar
+        android:id="@+id/searchProgress"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="40dp"
+        android:indeterminateTint="@color/primary"
+        android:visibility="gone"/>
+
+    <!-- No Results -->
+    <TextView
+        android:id="@+id/noResultsText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ابحث عن مستخدم"
+        android:textSize="14sp"
+        android:textColor="@color/text_secondary"
+        android:fontFamily="@font/cairo_regular"
+        android:layout_gravity="center"
+        android:layout_marginTop="40dp"/>
+
+</LinearLayout>
+
+
+<!-- ═══════════════════════════════════════════════════════════════

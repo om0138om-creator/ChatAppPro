@@ -1,0 +1,94 @@
+     4. item_message_received.xml - تصميم الرسالة المُستلمة
+     ═══════════════════════════════════════════════════════════════ -->
+
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="4dp">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/senderImage"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignBottom="@id/messageCard"
+        android:src="@drawable/default_avatar"
+        app:civ_border_width="1dp"
+        app:civ_border_color="@color/border_color"
+        android:layout_marginEnd="8dp"/>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/messageCard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/senderImage"
+        android:layout_marginEnd="80dp"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="2dp"
+        app:cardBackgroundColor="@color/white">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="12dp"
+            android:minWidth="80dp"
+            android:maxWidth="280dp">
+
+            <!-- Media Container -->
+            <RelativeLayout
+                android:id="@+id/mediaContainer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/messageImage"
+                    android:layout_width="220dp"
+                    android:layout_height="220dp"
+                    android:scaleType="centerCrop"
+                    android:background="@drawable/bg_image_placeholder"/>
+
+                <ProgressBar
+                    android:id="@+id/downloadProgress"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_centerInParent="true"
+                    android:indeterminateTint="@color/primary"
+                    android:visibility="gone"/>
+
+            </RelativeLayout>
+
+            <!-- Message Text -->
+            <TextView
+                android:id="@+id/messageText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="نص الرسالة هنا"
+                android:textSize="15sp"
+                android:textColor="@color/text_primary"
+                android:fontFamily="@font/cairo_regular"
+                android:lineSpacingExtra="2dp"/>
+
+            <!-- Time -->
+            <TextView
+                android:id="@+id/timeText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="12:34"
+                android:textSize="11sp"
+                android:textColor="@color/text_secondary"
+                android:fontFamily="@font/cairo_regular"
+                android:layout_gravity="end"
+                android:layout_marginTop="4dp"/>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>
+
+
+<!-- ═══════════════════════════════════════════════════════════════
