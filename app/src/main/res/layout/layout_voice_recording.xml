@@ -1,16 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
-14. layout_voice_recording.xml - واجهة التسجيل الصوتي
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#FFFFFF"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:padding="12dp">
 
-المميزات:
-- Material Design Components
-- RTL Support للعربية
-- Responsive Layouts
-- Beautiful Animations
-- Custom Shapes & Gradients
-- Dark Mode Ready
+    <ImageView
+        android:id="@+id/micIcon"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:src="@android:drawable/ic_btn_speak_now" />
 
-@author ChatApp Pro Team
-@version 1.0
--->
+    <TextView
+        android:id="@+id/recordTimer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:text="00:00"
+        android:textColor="#FF0000"
+        android:textSize="16sp"
+        android:textStyle="bold" />
 
-<!-- ═══════════════════════════════════════════════════════════════
+    <TextView
+        android:id="@+id/slideToCancel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="اسحب للإلغاء"
+        android:textColor="#888888"
+        android:textSize="14sp" />
+
+</LinearLayout>
