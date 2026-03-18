@@ -1,6 +1,3 @@
-     7. dialog_new_chat.xml - نافذة محادثة جديدة
-     ═══════════════════════════════════════════════════════════════ -->
-
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -75,6 +72,3 @@
         android:layout_marginTop="40dp"/>
 
 </LinearLayout>
-
-
-<!-- ═══════════════════════════════════════════════════════════════
